@@ -1,22 +1,8 @@
-// Load the AWS SDK for Node.js
-import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
 import { awsAccessKeyId, awsSecretAccessKey } from "./config.js";
 import AWS from 'aws-sdk';
 
 import fs from "fs";
 const region = 'us-west-1'
-
-// export function upload(bucketName, file, fileName) {
-//   const s3 = new S3Client.S3Client({
-//     credentials: {
-//       awsAccessKeyId,
-//       awsSecretAccessKey
-//     },
-//     region: region,
-//   });
-//
-//   return s3.done();
-// }
 
 export const upload = async (bucketName, file, filePath) => {
 
